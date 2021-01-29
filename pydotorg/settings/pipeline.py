@@ -31,6 +31,15 @@ PIPELINE_CSS = {
             'media': 'screen',
         },
     },
+    'font-awesome': {
+        'source_filenames': (
+            'stylesheets/font-awesome.min.css',
+        ),
+        'output_filename': 'stylesheets/no-mq.css',
+        'extra_context': {
+            'media': 'screen',
+        },
+    },
 }
 
 PIPELINE_JS = {
@@ -40,6 +49,12 @@ PIPELINE_JS = {
             'js/script.js',
         ),
         'output_filename': 'js/main-min.js',
+    },
+    'sponsors': {
+        'source_filenames': (
+            'js/sponsors/applicationForm.js',
+        ),
+        'output_filename': 'js/sponsors-min.js',
     },
     'IE8': {
         'source_filenames': (

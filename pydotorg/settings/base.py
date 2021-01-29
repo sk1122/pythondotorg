@@ -144,6 +144,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'django.contrib.humanize',
 
     'pipeline',
     'sitetree',
@@ -151,6 +152,9 @@ INSTALLED_APPS = [
     'haystack',
     'honeypot',
     'waffle',
+    'ordered_model',
+    'widget_tweaks',
+    'django_countries',
 
     'users',
     'boxes',
@@ -243,6 +247,14 @@ JOB_FROM_EMAIL = 'jobs@python.org'
 
 # Events
 EVENTS_TO_EMAIL = 'events@python.org'
+
+# Sponsors
+SPONSORSHIP_NOTIFICATION_FROM_EMAIL = os.environ.get(
+    "SPONSORSHIP_NOTIFICATION_FROM_EMAIL", "sponsors@python.org"
+)
+SPONSORSHIP_NOTIFICATION_TO_EMAIL = os.environ.get(
+    "SPONSORSHIP_NOTIFICATION_TO_EMAIL", "psf-sponsors@python.org"
+)
 
 # Mail
 DEFAULT_FROM_EMAIL = 'noreply@python.org'
